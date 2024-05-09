@@ -33,6 +33,7 @@ import android.content.ServiceConnection;
 import android.content.pm.PackageManager;
 import android.content.res.Resources;
 import android.database.Cursor;
+import android.hardware.SensorPrivacyManager;
 import android.media.AudioManager;
 import android.net.Uri;
 import android.os.Bundle;
@@ -159,6 +160,8 @@ public class FmMainActivity extends Activity implements FmFavoriteEditDialog.Edi
     private FmScroller mScroller;
 
     private FmScroller.EventListener mEventListener;
+
+    private SensorPrivacyManager mSensorPrivacyManager;
 
     // Service listener
     private FmListener mFmRadioListener = new FmListener() {
@@ -506,6 +509,7 @@ public class FmMainActivity extends Activity implements FmFavoriteEditDialog.Edi
 
         mFragmentManager = getFragmentManager();
         mContext = getApplicationContext();
+        mSensorPrivacyManager = SensorPrivacyManager.getInstance(mContext);
 
         initUiComponent();
         registerButtonClickListener();
@@ -541,6 +545,13 @@ public class FmMainActivity extends Activity implements FmFavoriteEditDialog.Edi
             }
         };
         mScroller.registerListener(mEventListener);
+
+        boolean isMicMuted = mSensorPrivacyManager.isSensorPrivacyEnabled(
+                SensorPrivacyManager.Sensors.MICROPHONE);
+
+        if (isMicMuted) {
+            mSensorPrivacyManager.showSensorUseDialog(SensorPrivacyManager.Sensors.MICROPHONE);
+        }
     }
 
     @Override
