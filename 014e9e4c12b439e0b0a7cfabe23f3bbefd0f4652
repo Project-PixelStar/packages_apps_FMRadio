@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c850e081_2f502179",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 5
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 16185
+      },
+      "writtenOn": "2024-05-28T04:09:42Z",
+      "side": 1,
+      "message": "@gunni.3181@gmail.com stop reviewing random things with random votes - will result in a ban.",
+      "revId": "014e9e4c12b439e0b0a7cfabe23f3bbefd0f4652",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
