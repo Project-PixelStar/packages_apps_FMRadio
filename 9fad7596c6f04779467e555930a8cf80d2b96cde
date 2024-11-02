@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f30580cc_26f17c48",
+        "filename": "res/values/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 99,
+      "author": {
+        "id": 24262
+      },
+      "writtenOn": "2024-11-02T08:23:13Z",
+      "side": 1,
+      "message": "I\u0027m pretty sure this string is unused since 356338 and can be deleted",
+      "revId": "9fad7596c6f04779467e555930a8cf80d2b96cde",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
